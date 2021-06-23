@@ -4,28 +4,36 @@
         "$id": "summerOutfit",
         "source": "knowledgeGraph",
         "destination": "pages",
-      "fields": [
-        "id",
-        "uid",
-        "name",
-        "slug",
-        "richTextDescription",
-        "c_relatedProducts",
-        "c_relatedProducts.name",
-        "c_relatedProducts.slug",
-        "c_relatedProducts.photoGallery",
-        "c_relatedProducts.brand",
-        "c_relatedProducts.price",
-        "c_relatedProducts.color",
-        "c_relatedProducts.richTextDescription"
-      ],
-      "filter": {
-        "entityTypes": [
-          "ce_summerOutfit"
-        ]
-      }
+        "fields": [
+            "id",
+            "uid",
+            "name",
+            "slug",
+            "richTextDescription",
+            "c_relatedProducts.name",
+            "c_relatedProducts.slug",
+            "c_relatedProducts.photoGallery",
+            "c_relatedProducts.brand",
+            "c_relatedProducts.price",
+            "c_relatedProducts.color",
+            "c_relatedProducts.richTextDescription",
+            "meta"
+          ],
+        "localization": {
+            "locales": [
+                "en", "en-GB", "es","fr"
+            ],
+            "fallback": {
+                "en-GB": ["en"]
+            }
+        },
+        "filter": {
+          "entityTypes": [
+            "ce_summerOutfit"
+          ]
+        }
     },
-    "urlFormat": "{{slug}}"
+    "urlFormat": "{{slug}}-{{meta.locale}}"
 }
 ---
 
